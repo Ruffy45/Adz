@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  overflow: hidden;
+}
+.particles-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, #00031D, #000535);
+}
+
+#particles-js {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #00031D, #000535);
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* wave thingy */
+@keyframes move_wave {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(0.55);
+  }
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+
+.waveWrapper {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+
+.waveWrapperInner {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  bottom: -1px;
+}
+
+.bgTop {
+  z-index: 15;
+  opacity: 0.5;
+}
+
+.bgMiddle {
+  z-index: 10;
+  opacity: 0.75;
+}
+
+.bgBottom {
+  z-index: 5;
+}
+
+.wave {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+  z-index: -1;
+}
+
+.waveTop {
+  background-size: 50% 100px;
+}
+
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+  -webkit-animation: move-wave 3s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.waveMiddle {
+  background-size: 50% 120px;
+}
+
+.waveAnimation .waveMiddle {
+  animation: move_wave 10s linear infinite;
+}
+
+.waveBottom {
+  background-size: 50% 100px;
+}
+
+.waveAnimation .waveBottom {
+  animation: move_wave 15s linear infinite;
+}
+
+/* end of wave thingy */
+
+/* image */
+#img{
+  width: 50;
+  height: 50px;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: transparent; 
+  padding: 16;
+  z-index: 99;
+}
+
+.logo {
+  margin-right: auto; /* Pushes the logo to the left */
+  padding-left: 15%;
+  padding-top: 1%;
+}
+
+.nav-links {
+  margin-left: auto; /* Pushes the list items to the right */
+  padding-right: 15%;
+  font-size: 13px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 100;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+
+}
+
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 5%;
+}
+
+.nav-links li {
+  margin-left: 15px; /* Adjust spacing between list items */
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  color: #848699;
+  padding: 5px 7px;
+  transition: color 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+  color: #f2f2f4 !important;
+}
+
+
+
+/* End of navbar */
+
+/* Text On Left */
+#main-div{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: transparent; 
+  padding-top: 160px;
+  z-index: 98;
+  gap: 40px;
+}
+
+/* internal txt on left */
+#text-1{
+  font-size: 45px;
+  font-weight: 700;
+  padding-bottom: 5%;
+   
+}
+#text-2{
+  font-size: 24px;
+  font-weight: 100;
+  word-spacing: 5px;
+}
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 8%;
+}
+
+.button-container ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.button-container li {
+  margin-right: 10px;
+}
+
+.button-container li:last-child {
+  margin-right: auto; /* Push the last button to the left */
+}
+
+.green-button {
+  background-color: #1ADB80;
+  color: black;
+  font-size: 18px;
+  padding: 18px 35px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* .loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5eff1; /* Adjust the background color as desired 
+  z-index: 9999; /* Ensure the loading screen appears on top of other elements 
+  opacity: 1;
+  transition: opacity 0.5s ease;
+} */
+
+/*effect-underline*/
+/* a.effect-underline:after {
+	content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+  opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+
+a.effect-underline:hover:after {
+  opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+} */
+
+
+
