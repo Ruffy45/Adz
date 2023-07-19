@@ -24,7 +24,7 @@
   z-index: 1;
 }
 
-/* wave thingy */
+/* Wave Anim Css */
 @keyframes move_wave {
   0% {
     transform: translateX(0) translateZ(0) scaleY(1);
@@ -107,7 +107,7 @@
   animation: move_wave 15s linear infinite;
 }
 
-/* end of wave thingy */
+/* end of wave anim css */
 
 /* image */
 #img{
